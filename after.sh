@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# If you would like to do some extra provisioning you may
-# add any commands you wish to this file and they will
-# be run after the Homestead machine is provisioned.
-
 # libffi-dev is required for later versions of Ruby
 echo "Installing libffi-dev"
 apt-get install -y libffi-dev
@@ -34,8 +30,8 @@ su vagrant <<'EOF'
     echo "Installing rbenv"
     git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 
-    echo "Adding shims / etc"
-    echo 'export PATH="$PATH:$HOME/.rbenv/bin"' >> ~/.zshrc
+    echo "Add shims and composer to ZSH Path"
+    echo 'export PATH="$PATH:$HOME/.rbenv/bin:$HOME/.composer/vendor/bin"' >> ~/.zshrc
     echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 
     echo "Installing ruby-build"
