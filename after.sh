@@ -50,4 +50,8 @@ su vagrant <<'EOF'
 
     echo "Installing bundler gem"
     ~/.rbenv/shims/gem install bundler
+
+    echo "Installing awesome print gem"
+    ~/.rbenv/shims/gem install awesome_print
+
 EOF
