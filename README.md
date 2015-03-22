@@ -3,7 +3,6 @@ Where I keep my configuration files and such
 
 ## after.sh
 Additional provisioning for Laravel Homestead box
-- psysh
 - Drush
 - rbenv
 - ruby-build
