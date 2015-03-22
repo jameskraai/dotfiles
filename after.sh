@@ -26,6 +26,9 @@ su vagrant <<'EOF'
     echo "Installing Psysh"
     composer g require psy/psysh:@stable
 
+    echo "Installing Drush 6.x (stable)"
+    composer global require drush/drush:6.*
+
     # Install Ruby and friends
     echo "Installing rbenv"
     git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
