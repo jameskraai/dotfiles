@@ -10,6 +10,9 @@ apt-get install -y zsh
 echo "Setting ZSH as default shell"
 sudo chsh -s $(which zsh) vagrant
 
+echo "Installing Gitflow"
+apt-get install -y git-flow
+
 echo "Installing wp-cli"
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 chmod +x wp-cli.phar
