@@ -23,6 +23,11 @@ su vagrant <<'EOF'
     echo "Changing sudoedit command to Vim"
     echo "3" | sudo update-alternatives --config editor --quiet
 
+    echo "Install Adminer"
+    mkdir ~/dev/adminer
+    wget -P ~/dev/adminer adminer.org/latest.php
+    mv ~/dev/adminer/latest.php ~/dev/adminer/adminer.php
+
     echo "Installing Oh My ZSH"
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
