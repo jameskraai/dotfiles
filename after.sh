@@ -13,29 +13,29 @@ sudo chsh -s $(which zsh) vagrant
 echo "Installing Gitflow"
 apt-get install -y git-flow
 
-echo "Installing wp-cli"
-curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-chmod +x wp-cli.phar
-sudo mv wp-cli.phar /usr/local/bin/wp
-
 su vagrant <<'EOF'
 
     echo "Changing sudoedit command to Vim"
     echo "3" | sudo update-alternatives --config editor --quiet
 
-    echo "Install Adminer"
-    mkdir ~/dev/adminer
-    wget -P ~/dev/adminer adminer.org/latest.php
-    mv ~/dev/adminer/latest.php ~/dev/adminer/adminer.php
-
     echo "Installing Oh My ZSH"
     curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+    echo "Installing Adminer and beautify"
+    rm -rf ~/dev/adminer
+    mkdir ~/dev/adminer
+    wget -P ~/dev/adminer adminer.org/latest.php
+    mv ~/dev/adminer/latest.php ~/dev/adminer/index.php
+    wget -P ~/dev/adminer https://raw.githubusercontent.com/vrana/adminer/master/designs/pepa-linha/adminer.css
 
     echo "Installing Psysh"
     composer g require psy/psysh:@stable
 
+    echo "Installing WP-CLI"
+    composer global require wp-cli/wp-cli
+
     echo "Installing Drush 6.x (stable)"
-    composer global require drush/drush:6.*
+    composer global require drush/drush
 
     # Install Ruby and friends
     echo "Installing rbenv"
