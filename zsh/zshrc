@@ -1,0 +1,13 @@
+source .antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle git
+
+# Syntax highlighting bundle
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen theme robbyrussell
+antigen apply
+
+export PATH=$HOME/.bin:$PATH
+
