@@ -1,5 +1,10 @@
 source $HOME/.antigen/antigen.zsh
 
+# Load our aliases.
+if [ -f $HOME/.zsh_aliases ]; then
+    source $HOME/.zsh_aliases
+fi
+
 antigen use oh-my-zsh
 
 antigen bundle git
@@ -8,5 +13,23 @@ antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme robbyrussell
 antigen apply
+
+
+###
+# History
+###
+HISTFILE=$HOME/.zsh_history
+HIST_STAMPS="yyyy-mm-dd"
+HISTSIZE=1024
+SAVEHIST=1024
+setopt append_history
+setopt hist_ignore_all_dups
+unsetopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt hist_verify
+setopt inc_append_history
+setopt share_history
+setopt bang_hist
+
 
 export PATH=$HOME/.bin:$PATH
