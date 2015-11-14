@@ -1,4 +1,4 @@
-source .antigen/antigen.zsh
+source $HOME/.antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
@@ -10,4 +10,3 @@ antigen theme robbyrussell
 antigen apply
 
 export PATH=$HOME/.bin:$PATH
-
