@@ -1,13 +1,16 @@
-source .antigen/antigen.zsh
+source $HOME/.antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
 antigen bundle git
+antigen bundle jameskraai/zshAliases
+antigen bundle jameskraai/zshHistory
+antigen bundle kennethreitz/autoenv
 
 # Syntax highlighting bundle
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme robbyrussell
-antigen apply
+
+antigen-apply
 
 export PATH=$HOME/.bin:$PATH
-
