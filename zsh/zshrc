@@ -13,4 +13,4 @@ antigen theme robbyrussell
 
 antigen-apply
 
-export PATH=$HOME/.bin:$PATH
+export PATH=$HOME/.bin:$HOME/.composer/vendor/bin:$PATH
