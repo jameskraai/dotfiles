@@ -1,0 +1,10 @@
+
+
+sethandler <S-HOME> n-v:ide i:ide
+sethandler <S-END> n-v:ide i:ide
+sethandler <C-A> n-v:ide i:vim
+sethandler <C-C> n-v:ide i:vim
+sethandler <C-R> n-v:ide i:vim
+sethandler <C-V> n-v:ide i:vim
+sethandler <C-W> n-v:ide i:vim
+sethandler <C-X> n-v:ide i:vim
