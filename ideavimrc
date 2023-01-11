@@ -7,3 +7,5 @@ sethandler <C-R> n-v:ide i:vim
 sethandler <C-V> n-v:ide i:vim
 sethandler <C-W> n-v:ide i:vim
 sethandler <C-X> n-v:ide i:vim
+sethandler <C-F> n-v:ide i:vim
+
