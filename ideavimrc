@@ -1,5 +1,4 @@
-
-
+set clipboard+=unnamed
 sethandler <S-HOME> n-v:ide i:ide
 sethandler <S-END> n-v:ide i:ide
 sethandler <C-A> n-v:ide i:vim
