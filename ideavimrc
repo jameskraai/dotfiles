@@ -10,3 +10,8 @@ sethandler <C-X> n-v:ide i:vim
 sethandler <C-F> n-v:ide i:vim
 sethandler <C-N> n-v:ide i:vim
 
+nnoremap <C-c> "+yy
+nnoremap <C-v> "+p
+nnoremap <C-x> "+x
+nnoremap <C-a> ggVG
+
